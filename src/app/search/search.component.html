@@ -1,0 +1,65 @@
+
+<!-- 
+<!DOCTYPE HTML>
+<head>
+  <style>
+    #div1 {
+      width: 350px;
+      height: 70px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+  </style>
+  <!-- <script> -->
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js">
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script> -->
+<!-- </head>
+
+<body>
+  <div id="div1" ng-click="drop(event)" ng-click="allowDrop($event)"></div>
+  <br>
+<span>
+
+    <img id="drag1" src="assets/images/chat.jpg" draggable="true" (dragstart)="drag(event)" width="336" height="80"
+      (click)="opendialog()" alt="" />
+
+  </span> --> 
+
+  <h2>Drag and Drop</h2>
+  <div  id="div1" 
+        (drop)="drop($event)" 
+        (dragover)="allowDrop($event)"
+        (drop)="drop($event)" 
+    (dragover)="allowDrop($event)">
+  </div>
+  
+        <img 
+        src="assets/images/chat.jpg"  (click)="opendialog()"
+        draggable="true" 
+        (dragstart)="drag($event)" 
+        id="drag2"
+        width="88" 
+        height="31">
+  
+  
+  <!-- <div id="div2" 
+    (drop)="drop($event)" 
+    (dragover)="allowDrop($event)">
+  </div> -->
+
+  
+
+
